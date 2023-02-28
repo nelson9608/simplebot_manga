@@ -50,8 +50,8 @@ def deltabot_start(bot: DeltaBot) -> None:
     )
 
 
-@simplebot.filter
-def filter_messages(bot: DeltaBot, message: Message, replies: Replies) -> None:
+@simplebot.command()
+def manga(bot: DeltaBot, message: Message, replies: Replies) -> None:
     """Write to me in private to search for a manga.
 
     For example, send me a message with the text:
@@ -164,7 +164,7 @@ def read(bot: DeltaBot, payload: str, message: Message, replies: Replies) -> Non
 
 
 @simplebot.command(hidden=True)
-def download(bot: DeltaBot, payload: str, message: Message, replies: Replies) -> None:
+def mdown(bot: DeltaBot, payload: str, message: Message, replies: Replies) -> None:
     """Download the given manga chapter."""
     max_size = int(
         bot.get("pdfMaxSize", scope=message.get_sender_contact().addr)
