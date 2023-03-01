@@ -173,7 +173,7 @@ def mdown(bot: DeltaBot, payload: str, message: Message, replies: Replies) -> No
     _mdown(bot, payload, message, replies, _send_pdf, max_size)
 
 
-def _download(
+def _mdown(
     bot: DeltaBot,
     payload: str,
     message: Message,
