@@ -170,7 +170,7 @@ def mdown(bot: DeltaBot, payload: str, message: Message, replies: Replies) -> No
         bot.get("pdfMaxSize", scope=message.get_sender_contact().addr)
         or getdefault(bot, "pdfMaxSize")
     )
-    _download(bot, payload, message, replies, _send_pdf, max_size)
+    _mdown(bot, payload, message, replies, _send_pdf, max_size)
 
 
 def _download(
