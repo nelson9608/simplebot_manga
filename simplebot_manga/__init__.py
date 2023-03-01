@@ -160,7 +160,7 @@ def read(bot: DeltaBot, payload: str, message: Message, replies: Replies) -> Non
         bot.get("htmlMaxSize", scope=message.get_sender_contact().addr)
         or getdefault(bot, "htmlMaxSize")
     )
-    _download(bot, payload, message, replies, _send_html, max_size)
+    _mdown(bot, payload, message, replies, _send_html, max_size)
 
 
 @simplebot.command(hidden=True)
